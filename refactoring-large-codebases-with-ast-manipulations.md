@@ -4,7 +4,7 @@ Refactoring or converting a codebase from one framework or library to another ca
 
 There may be many reasons for refactoring code. It could be to rename a certain parameter or a function-name used throughout the whole codebase. Or switching from one library to another. Basically, anything that makes the product or development experience better, or simply reduces the cognitive complexity of the code. While IDEs often have some refactoring capabilities, they just can't always cut it. Especially when it comes to JavaScript.
 
-Throughout the article, a former project of mine will serve as the basis. The project of converting a codebase consisting of 1600+ JavaScript files from AMD to ES6 imports.
+Throughout the article, a former project of mine will serve as the basis. The project of converting a codebase consisting of 4000+ JavaScript files from AMD to ES6 imports.
 
 To convert that many files, a few different approaches can be taken. One could for example just craft a few scripts that, using regular-expressions, can substitute the right things. While that might work on very consistent codebases, you quickly stumble into weird corner-cases and strangely formatted files that cause the regular-expression to match the wrong things. Another approach, and the approach this article centers on, is AST-manipulations. AST is an abbreviation for Abstract Syntax Tree and is a tree representation of the code structure. I won't dive deeper into the theory and technicalities of AST seeing as the internet contains plenty of resources about the matter.
 
